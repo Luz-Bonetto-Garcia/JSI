@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo del Job Strain Index (JSI)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de JSI (Job Strain Index)</h1>
+    </header>
+    <main>
+        <form id="jsiForm">
+            <label for="intensidad">Intensidad del esfuerzo:</label>
+            <select id="intensidad" required>
+                <option value="1">Baja</option>
+                <option value="2">Moderada</option>
+                <option value="3">Alta</option>
+                <option value="4">Extrema</option>
+            </select>
+
+            <label for="duracion">Duración del esfuerzo (%):</label>
+            <input type="number" id="duracion" required min="0" max="100">
+
+            <label for="esfuerzos">Esfuerzos por minuto:</label>
+            <input type="number" id="esfuerzos" required min="0">
+
+            <label for="postura">Postura mano-muñeca:</label>
+            <select id="postura" required>
+                <option value="1">Neutral</option>
+                <option value="2">Leve desviación</option>
+                <option value="3">Desviación moderada</option>
+                <option value="4">Desviación extrema</option>
+            </select>
+
+            <label for="velocidad">Velocidad del trabajo:</label>
+            <select id="velocidad" required>
+                <option value="1">Lenta</option>
+                <option value="2">Moderada</option>
+                <option value="3">Rápida</option>
+                <option value="4">Muy rápida</option>
+            </select>
+
+            <label for="duracionTarea">Duración de la tarea (horas):</label>
+            <input type="number" id="duracionTarea" required min="0" max="24">
+
+            <button type="button" onclick="calcularJSI()">Calcular JSI</button>
+        </form>
+        <div id="resultado"></div>
+        <div class="footer">
+            <p>Bonetto, Maccari, Nicolli, Rossetti.</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
