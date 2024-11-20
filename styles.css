@@ -1,56 +1,170 @@
+/* Establecemos una fuente moderna y responsiva */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: hwb(218 96% 1%);
+    color: #333;
 }
 
+/* Encabezado con un fondo degradado y texto centralizado */
 header {
-    background-color: #11d217;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
     color: white;
-    padding: 1rem;
     text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Estilos generales para el contenedor principal */
 main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: white;
     padding: 2rem;
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 2rem;
 }
 
-form label, form input, form select {
-    display: block;
-    margin: 1rem 0;
+/* Formularios modernos con espacio entre campos */
+form {
+    display: grid;
+    gap: 1.5rem;
 }
 
-button {
-    background-color: #11d217;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
+label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Estilo para los campos de entrada y select */
+input, select, button {
+    padding: 1rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón con transición para un hover más dinámico */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #0f9914;
+    background-color: #45a049;
+    transform: scale(1.05);
 }
 
-#resultado {
-    margin-top: 2rem;
-    padding: 1rem;
-    background: #eaeaea;
+/* Mejora de la tabla de posturas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table img {
+    width: 80px;
+    height: auto;
     border-radius: 4px;
 }
 
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Estilos para los labels dentro de la tabla */
+label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Estilo para la sección de resultado */
+#resultado {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Estilo para el pie de página */
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 10px;
-    text-align: left;
-    font-family: Arial, sans-serif;
-    font-size: 12px; /* Tamaño más pequeño */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    table td {
+        padding: 8px;
+    }
+
+    table img {
+        width: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        padding: 1.2rem;
+    }
+
+    #resultado {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    
+}
+a:hover {
+    color: orange;
 }
